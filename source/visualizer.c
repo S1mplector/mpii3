@@ -25,9 +25,9 @@ void visualizer_render(const float *bands, float elapsed, const VisualizerSettin
         int step = 576 / (int)s->bars, gap = s->bars == 32 ? 6 : 8;
         for (unsigned i = 0; i < s->bars; i++) {
             int height = (int)(levels[i] * 109), x = 32 + (int)i * step;
-            rect(x, 319, step - gap, 2, 0x26334b);
+            display_rect(x, 319, step - gap, 2, 0x26334b);
             for (int y = 0; y < height; y += 5)
-                rect(x, 315 - y, step - gap, 3, y > 65 ? 0xacb9fa : 0x64eaf2);
+                display_rect(x, 315 - y, step - gap, 3, y > 65 ? 0xacb9fa : 0x64eaf2);
         }
     } else {
         unsigned points = s->bars * 3;
@@ -36,8 +36,8 @@ void visualizer_render(const float *bands, float elapsed, const VisualizerSettin
             float radius = 39 + levels[i / 3] * 30;
             int x = 320 + (int)(cosf(angle) * radius * 2.8f),
                 y = 264 + (int)(sinf(angle) * radius * 0.8f);
-            rect(x, y, 6, 4, i % 2 ? 0x64eaf2 : 0xacb9fa);
+            display_rect(x, y, 6, 4, i % 2 ? 0x64eaf2 : 0xacb9fa);
         }
-        text(290, 258, 2, 0xeaf1ff, "mpii3");
+        display_text(290, 258, 2, 0xeaf1ff, "mpii3");
     }
 }

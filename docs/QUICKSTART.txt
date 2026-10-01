@@ -1,0 +1,34 @@
+mpii3 - first development build
+
+1. Extract this ZIP into the root of your Wii SD card or USB device.
+   You should end up with apps/mpii3/boot.dol, icon.png, and meta.xml.
+2. Keep your existing Music folder. The app scans Music recursively.
+   The previously installed Music/Lofi Library collection and its M3U
+   playlists use this layout and do not need to be moved.
+3. Safely eject the device and put it in your Wii.
+4. Open Homebrew Channel, choose mpii3, then Load.
+5. Up/Down selects music. A starts playback. Press 1 to see playlists.
+
+CONTROLS
+A: play selected item; pause/resume the selected playing track/playlist
+Left/Right: previous/next track
++/-: volume
+1: music/playlist browser
+2: loop off, all, or one
+B: open visualizer settings; press again to save and close
+HOME: save changed settings and exit
+
+VISUALIZER SETTINGS
+Up/Down selects a setting; Left/Right changes it.
+Choose Spectrum or Orbit, 8/16/32 bars, sensitivity, response speed,
+and smoothing. A restores visualizer defaults. Changes preview live.
+
+Settings save to apps/mpii3/settings.ini on the selected SD/USB device.
+
+This package adds a separate Homebrew app. WiiMC can remain installed.
+No music files or Wii system components are included.
+
+STATUS
+This is an alpha build: compiled for Wii, with automated core tests.
+Real Wii playback and rendering have not yet been verified.
+Source and reports: https://github.com/S1mplector/mpii3

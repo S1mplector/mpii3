@@ -18,6 +18,7 @@ The application is written in C11. Each module has a narrow public header; imple
 | `view` | Builds the browser, now-playing, and settings screens from a read-only view model |
 | `visualizer` | Groups measured bands and renders spectrum/orbit animations |
 | `display` | Encapsulates GRRLIB, the font, logo texture, and drawing primitives |
+| `font_render` | Caches immutable glyph textures; draws each glyph as one GRRLIB image |
 | `text_encoding` | Bounded UTF-8 decoding with replacement for malformed filenames |
 
 ## Playback and ownership
@@ -34,6 +35,6 @@ No deployment is performed by build or packaging scripts. They create files unde
 
 ## Graphics
 
-GRRLIB handles GX rendering and TTF fonts. The display module converts filenames to wide characters itself, avoiding reliance on the Wii C locale for UTF-8. Logical layout uses 640×480 coordinates. Physical video modes and TV overscan remain hardware validation items.
+GRRLIB handles GX rendering. FreeType rasterizes glyphs once into a bounded 512-entry texture cache; text rendering then uses GRRLIB textured quads. Cached textures remain alive until shutdown so GPU commands never reference freed glyphs. The display module converts filenames to wide characters itself, avoiding reliance on the Wii C locale for UTF-8. Logical layout uses 640×480 coordinates. Physical video modes and TV overscan remain hardware validation items.
 
 The analyzer obtains energy from libmad's 32 decoded subbands. The visualizer groups those bands for 8/16/32 bars, applies sensitivity, then time-based attack/decay smoothing. Graphics never block on filesystem reads or inspect decoder internals.
