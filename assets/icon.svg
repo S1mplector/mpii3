@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="48" viewBox="0 0 128 48">
+<title>mpii3 — Aero glass Homebrew Channel icon</title>
+<defs>
+ <linearGradient id="rim" x2="0" y2="1"><stop stop-color="#f0fcff"/><stop offset=".5" stop-color="#719fb9"/><stop offset="1" stop-color="#d9f9ff"/></linearGradient>
+ <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#59b9eb"/><stop offset=".48" stop-color="#258ec6"/><stop offset=".51" stop-color="#08527d"/><stop offset="1" stop-color="#087dab"/></linearGradient>
+ <linearGradient id="light" x2="0" y2="1"><stop stop-color="#fff" stop-opacity=".7"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <linearGradient id="audio" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#58f9ef"/></linearGradient>
+</defs>
+<rect x=".5" y=".5" width="127" height="47" rx="10" fill="url(#rim)"/>
+<rect x="2" y="2" width="124" height="44" rx="8.5" fill="url(#glass)" stroke="#2a6f99" stroke-width=".5"/>
+<path d="M10 3H118Q125 3 125 11V19Q67 30 3 23V11Q3 3 10 3Z" fill="url(#light)"/>
+<g fill="url(#audio)"><rect x="10" y="20" width="4" height="10" rx="2"/><rect x="16" y="13" width="4" height="23" rx="2"/><rect x="22" y="8" width="4" height="31" rx="2"/><rect x="28" y="16" width="4" height="17" rx="2"/></g>
+<g fill="none" stroke="#f2fcff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M43 31V19M43 22Q49 14 53 22V31M53 22Q60 14 63 22V31M70 38V19M70 22Q81 13 81 25Q81 35 70 29M88 21V31M96 21V31M104 17Q116 12 117 21Q116 25 109 25M109 25Q118 24 117 31Q115 38 104 33"/>
+</g><g fill="#c2ffff"><circle cx="88" cy="15.5" r="2"/><circle cx="96" cy="15.5" r="2"/></g>
+<path d="M9 43H118" stroke="#60eafa" stroke-opacity=".5"/>
+</svg>

@@ -1,0 +1,29 @@
+name: Test and build
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  core-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make test
+  wii-build:
+    runs-on: ubuntu-latest
+    container:
+      image: devkitpro/devkitppc@sha256:4c919aa26151dd43d88ca28c922d1fe2409579a8ba60ef56517baf1abdfb1a48
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - run: make -j2 package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mpii3-homebrew
+          path: |
+            dist/*.zip
+            dist/SHA256SUMS
+            build/mpii3.elf

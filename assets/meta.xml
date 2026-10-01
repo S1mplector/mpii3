@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>mpii3</name>
+  <coder>S1mplector</coder>
+  <version>0.1.0-alpha.1</version>
+  <release_date>20261001000000</release_date>
+  <short_description>Music, playlists, and reactive visuals</short_description>
+  <long_description>MP3 player for Wii homebrew. Discovers music and M3U playlists under SD:/Music and USB:/Music. Includes track and queue looping, spectrum and orbit visualizers, and live controls for bar count, sensitivity, response speed, and smoothing. Press B for settings. Development alpha: real Wii validation pending.</long_description>
+  <no_ios_reload/>
+</app>

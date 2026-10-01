@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<title>mpii3 — Aero glass music player</title>
+<defs>
+ <linearGradient id="rim" x2=".7" y2="1"><stop stop-color="#fff"/><stop offset=".32" stop-color="#c4e8f4"/><stop offset=".55" stop-color="#48778b"/><stop offset=".8" stop-color="#ceeef8"/><stop offset="1" stop-color="#f5feff"/></linearGradient>
+ <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#62c7fa"/><stop offset=".45" stop-color="#1879b4"/><stop offset=".5" stop-color="#075181"/><stop offset="1" stop-color="#003e70"/></linearGradient>
+ <radialGradient id="bloom" cx=".5" cy=".95" r=".8"><stop stop-color="#7afffb" stop-opacity=".95"/><stop offset=".46" stop-color="#13b9f2" stop-opacity=".45"/><stop offset="1" stop-color="#0766a5" stop-opacity="0"/></radialGradient>
+ <linearGradient id="shine" x2="0" y2="1"><stop stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#e4faff" stop-opacity=".05"/></linearGradient>
+ <linearGradient id="silver" x2="0" y2="1"><stop stop-color="#fff"/><stop offset=".48" stop-color="#e8f7ff"/><stop offset=".53" stop-color="#92b6ca"/><stop offset="1" stop-color="#f6fdff"/></linearGradient>
+ <linearGradient id="aqua" x2="0" y2="1"><stop stop-color="#eeffff"/><stop offset=".4" stop-color="#96ffff"/><stop offset="1" stop-color="#20cfdf"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-20%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="13" flood-color="#092d50" flood-opacity=".4"/></filter>
+ <filter id="glow" x="-60%" y="-30%" width="220%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+ <clipPath id="inside"><rect x="47" y="35" width="418" height="430" rx="94"/></clipPath>
+</defs>
+<g filter="url(#shadow)"><rect x="38" y="26" width="436" height="448" rx="103" fill="url(#rim)"/>
+<rect x="47" y="35" width="418" height="430" rx="94" fill="url(#glass)" stroke="#173f62" stroke-width="2"/>
+<g clip-path="url(#inside)">
+ <rect x="47" y="35" width="418" height="430" fill="url(#bloom)"/>
+ <ellipse cx="250" cy="441" rx="179" ry="49" fill="#6bfafa" opacity=".14"/>
+ <path d="M40 42H470V198C361 236 184 220 40 257Z" fill="url(#shine)"/>
+ <path d="M68 87C153 43 359 38 435 84" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3"/>
+ <path d="M80 403C177 458 350 458 430 394" fill="none" stroke="#65ffff" stroke-opacity=".35" stroke-width="2"/>
+</g>
+<g fill="#66ffff" filter="url(#glow)" opacity=".8"><rect x="156" y="167" width="28" height="72" rx="13"/><rect x="199" y="127" width="28" height="151" rx="13"/><rect x="242" y="93" width="28" height="206" rx="13"/><rect x="285" y="137" width="28" height="132" rx="13"/><rect x="328" y="179" width="28" height="65" rx="13"/></g>
+<g fill="url(#aqua)" stroke="#edffff" stroke-width="1.3"><rect x="156" y="167" width="28" height="72" rx="13"/><rect x="199" y="127" width="28" height="151" rx="13"/><rect x="242" y="93" width="28" height="206" rx="13"/><rect x="285" y="137" width="28" height="132" rx="13"/><rect x="328" y="179" width="28" height="65" rx="13"/></g>
+<g transform="translate(141 342) scale(3) translate(-43 -14)" fill="none" stroke="url(#silver)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M43 31V19M43 22Q49 14 53 22V31M53 22Q60 14 63 22V31M70 38V19M70 22Q81 13 81 25Q81 35 70 29M88 21V31M96 21V31M104 17Q116 12 117 21Q116 25 109 25M109 25Q118 24 117 31Q115 38 104 33"/>
+ <path d="M88 15.5h.01M96 15.5h.01" stroke="#d5ffff" stroke-width="4"/>
+</g>
+<path d="M423 91v22m-11-11h22" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+</g>
+</svg>
